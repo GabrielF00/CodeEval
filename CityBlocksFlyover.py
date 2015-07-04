@@ -73,3 +73,5 @@ for test in test_cases:
     line_slope = float(yvals[len(yvals) - 1]) / xvals[len(xvals) - 1]
 
     print evaluateCell(xvals, yvals, 1, 1, line_slope, 1)
+
+test_cases.close()
