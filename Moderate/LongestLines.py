@@ -31,7 +31,11 @@ For example:
 * Hello World
 
 """
+""" This implementation 0:00:00.119164 """
+from datetime import datetime
 import sys
+
+starttime = datetime.now()
 
 with open(sys.argv[1], 'r') as test_cases:
     num_to_print = int(test_cases.readline())
@@ -39,3 +43,5 @@ with open(sys.argv[1], 'r') as test_cases:
     lines = sorted(lines, key=lambda line: len(line), reverse=True)
     for i in range(0, num_to_print):
         print lines[i].strip()
+
+print datetime.now() - starttime

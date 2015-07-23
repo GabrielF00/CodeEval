@@ -33,8 +33,7 @@ import sys
 with open(sys.argv[1], 'r') as test_cases:
     for input in test_cases:
         inputArr = input.split(";", 1)
-        arr = inputArr[0]
-        arr = arr.split(",")
+        arr = inputArr[0].split(",")
         arr = [int(x) for x in arr]
         sum = int(inputArr[1].strip())
         pairs = []
