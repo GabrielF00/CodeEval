@@ -1,3 +1,6 @@
+import sys
+from TimeStamp import TimeStamp
+
 __author__ = 'Gabriel Fishman'
 """
 TIME TO EAT
@@ -23,47 +26,6 @@ Sort timestamps in each schedule from the biggest to the smallest one.
 * 21:25:41 05:33:44
 
 """
-
-import sys
-
-
-class TimeStamp:
-    def __init__(self, timestamp_str):
-        self.str = timestamp_str
-        timestamp_arr = timestamp_str.strip().split(":")
-        self.hours = int(timestamp_arr[0])
-        self.minutes = int(timestamp_arr[1])
-        self.seconds = int(timestamp_arr[2])
-
-    def compare_to(self, other):
-        if self.hours > other.hours:
-            return 1
-        elif self.hours < other.hours:
-            return -1
-
-        if self.minutes > other.minutes:
-            return 1
-        elif self.minutes < other.minutes:
-            return -1
-
-        if self.seconds > other.seconds:
-            return 1
-        elif self.seconds < other.seconds:
-            return -1
-
-        return 0
-
-    def __lt__(self, other):
-        return self.compare_to(other) == -1
-
-    def __eq__(self, other):
-        return self.compare_to(other) == 0
-
-    def __gt__(self, other):
-        return self.compare_to(other) == 1
-
-    def __str__(self):
-        return self.str
 
 with open(sys.argv[1], 'r') as test_cases:
     for test in test_cases:
