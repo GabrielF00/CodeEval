@@ -33,7 +33,8 @@ You can help us by writing a program that investigates the input and finds GOOD 
 
 INPUT SAMPLE:
 
-Your program should accept as its first argument a path to a filename. Each string in this file is a chain. The pairs are separating by semicolon, the names and the address are separating by dash. E.g.
+Your program should accept as its first argument a path to a filename. Each string in this file is a chain. The pairs
+are separating by semicolon, the names and the address are separating by dash. E.g.
 
 * 4-2;BEGIN-3;3-4;2-END
 * 4-2;BEGIN-3;3-4;2-3
